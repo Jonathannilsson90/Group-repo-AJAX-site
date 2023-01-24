@@ -1,10 +1,38 @@
+body {
+    background-color: white;
+    color: black;
+}
+
 .top-banner{
+    background-color: #f0f0f0;
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.top-banner-content {
+    position: absolute;
+    text-align: center;
+}
+
+.top-banner h1, .top-banner h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.top-banner h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.top-banner .admin-button {
+    padding: 10px 20px;
+    margin-top: 20px;
 }
 
 .content-container{
@@ -23,21 +51,8 @@ h1{
     text-align: center;
 }
 
-body {
-    background-color: white;
-    color: black;
-}
-
 h1, h2, p {
     font-family: 'Spotify-Font', sans-serif;
-}
-
-.navbar {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
 }
 
 .container-book-shelf {
@@ -78,8 +93,4 @@ button:hover, button:active {
 .book-container:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-.book-container img {
-    animation: spin 0.5s ease-in-out infinite;
 }
