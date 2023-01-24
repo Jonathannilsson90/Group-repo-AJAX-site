@@ -3,6 +3,10 @@ body {
     color: black;
 }
 
+h1, h2, p {
+    font-family: 'Spotify-Font', sans-serif;
+}
+
 .top-banner{
     background-color: #f0f0f0;
     background-size: cover;
@@ -12,7 +16,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .top-banner-content {
@@ -28,6 +31,7 @@ body {
 .top-banner h1 {
     font-size: 3em;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .top-banner .admin-button {
@@ -37,7 +41,7 @@ body {
 
 .content-container{
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
 }
 
 .container-book-shelf{
@@ -45,14 +49,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     justify-content: space-between;
-}
-
-h1{
-    text-align: center;
-}
-
-h1, h2, p {
-    font-family: 'Spotify-Font', sans-serif;
 }
 
 .container-book-shelf {
@@ -68,7 +64,6 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
 }
 
 button:hover, button:active {
@@ -82,9 +77,8 @@ button:hover, button:active {
 }
 
 .book-container {
-    padding: 20px;
-    margin-bottom: 30px;
     border-radius: 10px;
+    padding: 25px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
