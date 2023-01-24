@@ -2,10 +2,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Manage-products</title>
+    <link rel="stylesheet" href="css/manage-products.css">
 </head>
 <body>
+    <div class="main-container">
+        <!-- All posts -->
+        <div class ="header">
+            <h1>Admins panel</h1>
+            <div class="buttons">
+                <a href="#"><button class="back-btn">Go to all books</button></a>
+                <a href="#"><button class="create-btn">Create a new book</button></a>
+            </div>
+        </div>
+        <!-- Post content -->
+    
+        <div id="books-container">
+            <table>
+                <tr>
+                  <th>Title</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+                <tr>
+                  <td><span>Charlotte's Web By E. B. White</span></td>
+                  <td><span>10</span></td>
+                  <td><span>2</span></td>
+                  <td><span>31.01.2019</span></td>
+                  <td>
+                    <div class="actions">
+                        <a href="#"><button class="back-btn">Change</button></a>
+                        <a href="#"><button class="back-btn">Delete</button></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                    <td><span>Salt to the Sea by Ruta Sepetys</span></td>
+                    <td><span>100</span></td>
+                    <td><span>0</span></td>
+                    <td><span>10.02.2022</span></td>
+                    <td>
+                        <div class="actions">
+                            <a href="#"><button class="back-btn">Change</button></a>
+                            <a href="#"><button class="back-btn">Delete</button></a>
+                        </div>
+
+                    </td>
+                </tr>
+              </table>
+        </div>
+    </div>    
     <script src="js/manage-products.js"></script>
 </body>
 </html>
