@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+h1, h2, p {
+    font-family: 'Spotify-Font', sans-serif;
+}
+
+.header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+
+.form-title{
+    text-align: center;
+}
+
+#create-book-container{
+    margin: auto;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.form-wrapper{
+    width: 90%;
+    margin: auto;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+ 
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+.input-field-2{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-field-2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    width: 80%;
+    height: 30px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+input#price, input#stock{
+    width: 50%;
+    height: 30px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 80%;
+    height: 200px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #b54c18;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer; 
+}
+
+.submit-form{
+    text-align: center;
+}

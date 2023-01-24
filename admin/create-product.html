@@ -2,10 +2,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="css/create-product.css">
 </head>
 <body>
+    
+    <div class="main-container">
+
+        <div class ="header">
+            <h1>Create a new book</h1>
+            <div class="buttons">
+                <a href="#"><button class="back-btn">Go to all books</button></a>
+            </div>
+        </div>
+
+
+        <div id="create-book-container">
+            <div class="form-wrapper">
+                <form action="" class="create-book">
+                    <div class="create-form-content">
+
+                        <div class="form-title">
+                            <h2>Create form</h2>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="title">Title</label>
+                            <input id="title" type="text" class="input-field" required>   
+                        </div>
+
+                        <div class="input-field">
+                            <label for="description">Description</label>
+                            <textarea id="description" type="text" class="textarea" required></textarea>   
+                        </div>   
+
+                        <div class="input-field">
+                                <label for="price">Price</label>
+                                <input id="price" type="number" class="input-field" required>   
+                        </div>
+                        <div class="input-field">
+                                <label for="stock">Stock</label>
+                                <input id="stock" type="number" class="input-field" required> 
+                        </div>                
+<!--                         <div class="input-field">
+                            <label for="stock">Stock</label>
+                            <input id="stock" type="number" class="input-field" required>   
+                        </div>  --> 
+
+                        <div class="input-field">
+                            <label for="image">Image</label>
+                            <input id="image" type="text" class="input-field">   
+                        </div>   
+
+                        <div class="input-field">
+                            <label for="cathegory">Cathegory</label>
+                            <input id="cathegory" type="text" class="input-field">   
+                        </div>   
+                    </div>
+                
+                    <div class="submit-form">
+                        <button class="submit">Create</button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+   
+    </div>
     <script src="js/create-product.js"></script>
 </body>
 </html>
