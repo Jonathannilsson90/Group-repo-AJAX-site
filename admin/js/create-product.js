@@ -44,6 +44,7 @@ form.addEventListener('submit', async function(event) {
     console.log('Inside submit function');
     checkAccessToken();
     console.log(localStorage.getItem('accessToken'))
+    
     let formData = new FormData(event.target); 
 
     let newBook = {
@@ -54,6 +55,8 @@ form.addEventListener('submit', async function(event) {
         image: formData.get('image'),
         category: formData.get('cathegory'),
     }
+
+
     console.log(JSON.stringify(newBook));
 
     let url = ROOT_URL + '/books';
