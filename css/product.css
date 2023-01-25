@@ -1,0 +1,14 @@
+.spesifik-book {
+  margin: 10% 5% 0% 5%;
+  display: flex;
+  justify-content: space-around;
+}
+.spesifik-book #book-img {
+  max-width: 30vh;
+}
+.spesifik-book .content {
+  width: 50vh;
+}
+.spesifik-book .content .description {
+  font-size: large;
+}/*# sourceMappingURL=product.css.map */
