@@ -17,9 +17,9 @@ h1, h2, p {
     text-align: center;
 }
 
-#create-book-container{
+#create-book-container, #update-book-container{
     margin: auto;
-    width: 90%;
+    width: 50%;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -48,11 +48,6 @@ label {
     flex-direction: row;
 }
 
-.input-field-2{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-}
 
 input{
     width: 80%;
@@ -81,6 +76,10 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer; 
+}
+
+button:hover, button:active {
+    background-color: #c7531a;
 }
 
 .submit-form{
