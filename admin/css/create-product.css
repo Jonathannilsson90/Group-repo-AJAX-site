@@ -17,7 +17,7 @@ h1, h2, p {
     text-align: center;
 }
 
-#create-book-container{
+#create-book-container, #update-book-container{
     margin: auto;
     width: 50%;
     padding-top: 20px;
