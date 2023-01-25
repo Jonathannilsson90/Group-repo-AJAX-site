@@ -2,7 +2,7 @@
 Group project about making [an API](https://github.com/Jonathannilsson90/Group-repo-API) with encryption, making AJAX requests from another website in this case a book library.
 <br>
 <br>
-We decided to host the API on railway.app to ease access for everyone involved in the project and to easier present out project to the class.
+We decided to host the website on railway.app to ease access for everyone involved in the project and to easier present out project to the class.
 As well as to learn more about webhosting.
 
 
