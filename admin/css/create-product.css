@@ -85,3 +85,7 @@ button:hover, button:active {
 .submit-form{
     text-align: center;
 }
+
+span{
+    color: red
+}
