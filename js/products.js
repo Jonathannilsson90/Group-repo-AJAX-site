@@ -1,4 +1,4 @@
-//=============================TEST 3=============================
+/* //=============================TEST 3=============================
 const accessToken = "secret";
 
 fetchBooks();
@@ -56,7 +56,7 @@ async function fetchBooks (accessToken){
         });
     });
 }
-
+ */
 //=============================TEST 1=============================
 /*const accessToken = localStorage.getItem("accessToken"); //Inte säker på om jag hämtar det på rätt sätt.
 
