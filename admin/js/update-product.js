@@ -1,52 +1,21 @@
 const ROOT_URL = "https://group-repo-api-production.up.railway.app";
-console.log(location.search);
+
+//Steps to extract information from url
 let queryString = location.search;
 let urlParams = new URLSearchParams(queryString);
 let bookId = urlParams.get('id');
-console.log(bookId);
 
-
-/*  async function generateAccessToken() {
-    try {
-        console.log('Inside generate access token');
-
-        let url = ROOT_URL + '/users/token'; 
-
-        //console.log(url)
-        let response = await fetch(url, {
-            method: 'POST', 
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({username:"admin", password:"123"}) 
-        });
-
-        let data = await response.json();
-        //console.log(data);
-        let token = data['Accesstoken'];
-        
-        localStorage.setItem('accessToken', token)
-        //console.log(localStorage.getItem('accessToken'));
-        //return token;
-    } catch (error) {
-        console.log(error);
-    }    
-} 
-
-function checkAccessToken() {
-    if (!localStorage.getItem('accessToken')) {
-        generateAccessToken()
-    }
-} */
-
+//Function when document loaded
 document.addEventListener("DOMContentLoaded", async function(event) {
+    //Define form element
     const form = document.getElementById('update-book');
-    console.log(form);
-    event.preventDefault();
+
+    //Get access token
     checkAccessToken();
+
+    //Get a book withspecific bookId 
     try
-    {   
-          
+    {    
         let res = await fetch(ROOT_URL + '/books/' + bookId, 
         {
             method: 'GET',
@@ -55,13 +24,9 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 'Authorization': 'Bearer ' + localStorage.getItem('accessToken')          
               }
         })
+        const data = await res.json();
 
-        const data = await res.json();  
-        console.log(data); 
-        console.log(data.title);
-
-        //formData.set('title', data.title);
-        //console.log(formData.get('title'));
+        //Set values to form elements
         $('#title').val(data.title);
         $('#description').val(data.description);
         $('#price').val(data.price);
@@ -69,14 +34,15 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         $('#image').val(data.image);
         $('#cathegory').val(data.category);
 
-
-         form.addEventListener('submit', async (event)=>
+        //Add listener to form submission
+        form.addEventListener('submit', async (event)=>
         {
             event.preventDefault();
-
+            //Define formData and get values from forn elements
             let formData = new FormData(event.target); 
 
-            let newBook = {
+            let newBook = 
+            {
                 title: formData.get('title'),
                 description: formData.get('description'),
                 price: formData.get('price'),
@@ -84,9 +50,10 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 image: formData.get('image'),
                 category: formData.get('cathegory'),
             }
-            console.log(JSON.stringify(newBook));
-            
-            try{
+
+            //Update existing book
+            try
+            {
                 const res = await fetch(ROOT_URL + '/books/' + bookId, {
                     method: 'PATCH',
                     body: JSON.stringify(newBook),
@@ -95,16 +62,14 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                       'Authorization': 'Bearer ' + localStorage.getItem('accessToken')          
                     }
                   })
-          
-                  console.log('after try function');
+                  //Relocate to manage-products page
                   location.replace("manage-products.html");        
-              }
-              catch(error) 
-              {
+            }
+            catch(error) 
+            {
                 console.log(error);
                 
-              } 
-
+            } 
             location.replace("manage-products.html"); 
         }); 
     }

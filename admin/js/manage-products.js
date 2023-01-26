@@ -1,6 +1,6 @@
 const ROOT_URL = "https://group-repo-api-production.up.railway.app";
 
-
+//Row element to add into table
 const row = function(book, date) { 
     return `  
     <tr>
@@ -18,79 +18,82 @@ const row = function(book, date) {
     `
 }
 
-  
-document.addEventListener("DOMContentLoaded", async function(event) {
-       
-    checkAccessToken();
-    //console.log(localStorage.getItem('accessToken'));
-    
-    const table = document.getElementById('table');
+//P element to show if there is no books in db
+const pNoBooks = function(book, date) { 
+    return `  
+    <h3>There is no books in your database</h3>
+    `
+}
 
-    try {
- 
-        const response1 = await fetch(ROOT_URL + '/books' , {            
+//Function then document loaded  
+document.addEventListener("DOMContentLoaded", async function(event) {      
+    checkAccessToken();  
+
+    const table = document.getElementById('table');
+    const divNoBooks = document.querySelector('.no-books');
+    divNoBooks.innerHTML = '';
+
+    //Get all books
+    try 
+    {
+        const response1 = await fetch(ROOT_URL + '/books' , 
+        {            
             method: 'GET', 
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
             },
         });
-
         const data = await response1.json();
-  
+ 
         if (data.length == 0)
         {
-  
-          table.innerHTML = noPosts();
+          divNoBooks.innerHTML = pNoBooks();
         }
         else
         {
-          for (let d of data) 
-          { 
-            let date = new Date(d.date);
-            let shortDate = date.toDateString();
-            table.innerHTML += row(d, shortDate);           
-          }
-       
-    //Listen to buttons
-    const btnsDeleteThisBook = document.getElementsByClassName('delete-btn');
-    console.log(btnsDeleteThisBook)
-    
-    for (let deleteButton of btnsDeleteThisBook)
-    {
-
-        deleteButton.addEventListener('click', async function (e)
-        {
-            //e.preventDefault();
-            let btn = e.target;
-            let bookId = btn.dataset.id;
-            console.log(bookId);
-
-            try
-            {
-                const response3 = await fetch(ROOT_URL + '/books' + `/${bookId}`, 
-                {
-                    method: 'DELETE', 
-                    headers: {
-                        //'Content-Type': 'application/json',
-                        'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
-                    }                  
-                }); 
-            } catch (error) {
-                console.log(error);
+            for (let d of data) 
+            { 
+                let date = new Date(d.date);
+                let shortDate = date.toDateString();
+                table.innerHTML += row(d, shortDate);           
             }
-
-            location.replace('manage-products.html'); // Redirect to index.html
-        })
-    } 
-
-
-
+       
+            //Listen to delete buttons
+            const btnsDeleteThisBook = document.getElementsByClassName('delete-btn');
+    
+            for (let deleteButton of btnsDeleteThisBook)
+            {
+                deleteButton.addEventListener('click', async function (e)
+                {
+                    let btn = e.target;
+                    let bookId = btn.dataset.id;
+                    console.log(bookId);
+                    //Get a book with a cpecific bookId
+                    try
+                    {
+                        const response3 = await fetch(ROOT_URL + '/books' + `/${bookId}`, 
+                        {
+                            method: 'DELETE', 
+                            headers: 
+                            {
+                                //'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
+                            }                  
+                        }); 
+                    } 
+                    catch (error) {
+                        console.log(error);
+                    }
+                    location.replace('manage-products.html'); // Redirect to index.html
+                })
+            } 
         } 
-    } catch (error) {
+    } 
+    catch (error) 
+    {
         console.log(error);
     }
-
 })
 
 
