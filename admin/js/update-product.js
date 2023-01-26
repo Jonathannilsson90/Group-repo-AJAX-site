@@ -6,7 +6,7 @@ let bookId = urlParams.get('id');
 console.log(bookId);
 
 
- async function generateAccessToken() {
+/*  async function generateAccessToken() {
     try {
         console.log('Inside generate access token');
 
@@ -37,7 +37,7 @@ function checkAccessToken() {
     if (!localStorage.getItem('accessToken')) {
         generateAccessToken()
     }
-}
+} */
 
 document.addEventListener("DOMContentLoaded", async function(event) {
     const form = document.getElementById('update-book');
