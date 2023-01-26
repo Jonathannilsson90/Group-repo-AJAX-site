@@ -7,6 +7,11 @@
 console.log(urlParams.get('id'));
  */
 
+
+
+
+
+
 const title = document.getElementById("book-title")
 const description = document.getElementById("description")
 const category = document.getElementById("book-category")
@@ -34,4 +39,6 @@ const stock = document.getElementById("book-stock")
         console.log(error);
     }
 }
+
+
 fechbook()
