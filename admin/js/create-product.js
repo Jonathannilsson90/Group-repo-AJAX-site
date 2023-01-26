@@ -2,7 +2,7 @@
 const ROOT_URL = "https://group-repo-api-production.up.railway.app";
 
 
- async function generateAccessToken() {
+/*  async function generateAccessToken() {
     try {
         console.log('Inside generate access token');
 
@@ -33,7 +33,7 @@ function checkAccessToken() {
     if (!localStorage.getItem('accessToken')) {
         generateAccessToken()
     }
-}
+} */
 
 
 const form = document.getElementById('create-book');
