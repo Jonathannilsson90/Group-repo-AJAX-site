@@ -1,4 +1,4 @@
-const ROOT_URL = "https://group-repo-api-production.up.railway.app";
+/* const ROOT_URL = "https://group-repo-api-production.up.railway.app";
 
 //Steps to extract information from url
 let queryString = location.search;
@@ -79,3 +79,4 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     }  
 })
 
+ */
