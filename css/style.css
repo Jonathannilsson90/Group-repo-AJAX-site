@@ -89,11 +89,11 @@ button:hover, button:active {
 
 .book-container {
     border-radius: 10px;
+    height: 600px;
     padding: 25px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-    width: 600px;
 }
 
 .book-container:hover {
