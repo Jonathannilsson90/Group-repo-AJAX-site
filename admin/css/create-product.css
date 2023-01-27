@@ -37,23 +37,28 @@ label {
     display: inline-block;
     width: 90px;
     text-align: left;
+    font-size: 18px;
 }
  
 .input-field{
     display: flex;
     flex-direction: column;
 }
+
 .input-field-2{
     display: flex;
     flex-direction: row;
 }
 
 
-input{
+input, select{
     width: 80%;
     height: 30px;
     border: 1px solid #999;
     margin-bottom: 20px;
+}
+select{
+    padding-top: 4px;
 }
 
 input#price, input#stock{
@@ -89,3 +94,4 @@ button:hover, button:active {
 span{
     color: red
 }
+
