@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         $('#price').val(data.price);
         $('#stock').val(data.stock);
         $('#image').val(data.image);
-        $('#cathegory').val(data.category);
+        $('#category').val(data.category);
 
         //Add listener to form submission
         form.addEventListener('submit', async (event)=>
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 price: formData.get('price'),
                 stock: formData.get('stock'),
                 image: formData.get('image'),
-                category: formData.get('cathegory'),
+                category: formData.get('category'),
             }
             console.log(JSON.stringify(newBook));
 
