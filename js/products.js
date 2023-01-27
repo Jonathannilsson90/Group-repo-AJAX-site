@@ -1,6 +1,5 @@
 //To-do list:
 // *Add comments to code
-// *Add href link to "more information" button
 
 async function fetchBooks() {
     try {
@@ -50,6 +49,11 @@ function displayBooks(books) {
         
         const infoButton = document.createElement("button");
         infoButton.textContent = "More information";
+
+        //EventListener to listen for "click" to send user to specific book page
+        infoButton.addEventListener("click", () => {
+            location.href = `product.html?id=${book._id}`;
+        }); 
         
         const newLine = document.createElement("br");
         const newLine2 = document.createElement("br");
