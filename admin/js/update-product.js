@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         $('#price').val(data.price);
         $('#stock').val(data.stock);
         $('#image').val(data.image);
-        $('#cathgory').val(data.category);
+        $('#category').val(data.category);
 
         //Add listener to form submission
         form.addEventListener('submit', async (event)=>
