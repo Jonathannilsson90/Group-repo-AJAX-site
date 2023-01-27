@@ -1,3 +1,7 @@
+//To-do list:
+// *Add comments to code
+// *Add href link to "more information" button
+
 async function fetchBooks() {
     try {
         const response = await fetch("https://group-repo-api-production.up.railway.app/books",
