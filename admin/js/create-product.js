@@ -20,7 +20,7 @@ form.addEventListener('submit', async function(event) {
         price: formData.get('price'),
         stock: formData.get('stock'),
         image: formData.get('image'),
-        category: formData.get('cathegory'),
+        category: formData.get('category'),
     }
     //Add a new book to db
     try
