@@ -23,15 +23,16 @@ h1, h2, p {
     text-align: center;
 }
 
-.top-banner h1, .top-banner h2 {
-    margin: 0;
-    padding: 0;
+.top-banner h2 {
+    margin-top: 20px; 
 }
 
 .top-banner h1 {
     font-size: 3em;
     font-weight: bold;
     text-decoration: underline;
+    margin: 0;
+    padding: 0;
 }
 
 .top-banner .admin-button {
@@ -41,19 +42,12 @@ h1, h2, p {
 
 .content-container{
     margin: 0 auto;
-    width: 60%;
-}
-
-.container-book-shelf{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-content: space-between;
+    width: 50%;
 }
 
 .container-book-shelf {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-content: space-between;
     align-items: center;
