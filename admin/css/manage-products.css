@@ -56,6 +56,9 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer; 
+    width: 100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 button:hover, button:active {
