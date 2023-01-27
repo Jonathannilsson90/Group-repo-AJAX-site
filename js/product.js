@@ -3,42 +3,36 @@
  * 5. Use the fetched pun data to prefill the textarea#content
   */
 
-/* let urlParams = new URLSearchParams(window.location.search)
-console.log(urlParams.get('id'));
- */
-
-
-
-
-
+ let urlParams = new URLSearchParams(window.location.search)
 
 const title = document.getElementById("book-title")
 const description = document.getElementById("description")
 const category = document.getElementById("book-category")
 const price = document.getElementById("book-price")
 const stock = document.getElementById("book-stock")
+const img = document.getElementById("book-img-spesific")
 
 
- async function fechbook() {
+async function fetchBooks() {
     try {
-        const response = await fetch("https://group-repo-api-production.up.railway.app/book/"+ "63d11731f3aa9b6b65e2ba0a" /* urlParams.get('id') */, {
+        const response = await fetch("https://group-repo-api-production.up.railway.app/books/" + urlParams.get('id'),
+        {   
             method: 'GET',
             headers: {
-                'Authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjc0NjQ2Mjg1fQ.QetG5qB4tj7ms1Jp0QMLWkQP3D7myCx7wZ-_jg8qu54'
+                'Authorization': 'bearer ' +  localStorage.getItem("accessToken")
             }
         });
-        const data = await response.json()
+        const books = await response.json();
 
-        title.innerText = `${data.titel}`
-        description.innerText = `${data.description}`
-        category.innerText = `${data.category}`
-        price.innerText = `${data.price}`
-        stock.innerText = `${data.stock}` 
-        
+        title.innerText += `${books.title}`
+        img.setAttribute("src", books.image);
+        description.innerText += `${books.description}`
+        category.innerText += `${books.category}`
+        price.innerText += `${books.price}`
+        stock.innerText += `${books.stock}` 
+
     } catch (error) {
         console.log(error);
     }
 }
-
-
-fechbook()
+fetchBooks()

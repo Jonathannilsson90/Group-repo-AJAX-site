@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-around;
 }
-.spesifik-book #book-img {
-  max-width: 30vh;
+.spesifik-book #book-img-spesific {
+  width: 30vh;
 }
 .spesifik-book .content {
   width: 50vh;
