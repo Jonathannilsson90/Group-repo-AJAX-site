@@ -26,13 +26,14 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         })
         const data = await res.json();
 
+        //Set default value to category
+        document.querySelector('#category').value = `${data.category}`; 
         //Set values to form elements
         $('#title').val(data.title);
         $('#description').val(data.description);
         $('#price').val(data.price);
         $('#stock').val(data.stock);
-        $('#image').val(data.image);
-        $('#category').val(data.category);
+        $('#image').val(data.image); 
 
         //Add listener to form submission
         form.addEventListener('submit', async (event)=>
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", async function(event) {
             event.preventDefault();
             //Define formData and get values from forn elements
             let formData = new FormData(event.target); 
+            let cathegory = document.getElementById("category");
+            let cathegoryOption = cathegory.options[cathegory.selectedIndex].value;
+            console.log(cathegoryOption)
 
             let newBook = 
             {
@@ -48,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 price: formData.get('price'),
                 stock: formData.get('stock'),
                 image: formData.get('image'),
-                category: formData.get('category'),
+                category: cathegoryOption,
             }
             console.log(JSON.stringify(newBook));
 

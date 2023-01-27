@@ -59,7 +59,7 @@ h1, h2, p {
 
 .content-container{
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
 }
 
 .container-book-shelf {
@@ -89,6 +89,7 @@ button:hover, button:active {
 
 .book-container {
     border-radius: 10px;
+    height: 600px;
     padding: 25px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);

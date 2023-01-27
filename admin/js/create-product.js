@@ -13,6 +13,9 @@ form.addEventListener('submit', async function(event) {
     let formData = new FormData(event.target); 
 
     //Get values from form elements and create a new book object
+    let cathegory = document.getElementById("category");
+    let cathegoryOption = cathegory.options[cathegory.selectedIndex].value;
+    console.log(cathegoryOption)
     let newBook = 
     {
         title: formData.get('title'),
@@ -20,7 +23,7 @@ form.addEventListener('submit', async function(event) {
         price: formData.get('price'),
         stock: formData.get('stock'),
         image: formData.get('image'),
-        category: formData.get('category'),
+        category: cathegoryOption,
     }
     //Add a new book to db
     try
