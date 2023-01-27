@@ -25,10 +25,10 @@ const stock = document.getElementById("book-stock")
         const data = await response.json()
 
         title.innerText = `${data.titel}`
-        description.innerText = `${data.titel}`
-        category.innerText = `${data.titel}`
-        price.innerText = `${data.titel}`
-        stock.innerText = `${data.titel}` 
+        description.innerText = `${data.description}`
+        category.innerText = `${data.category}`
+        price.innerText = `${data.price}`
+        stock.innerText = `${data.stock}` 
         
     } catch (error) {
         console.log(error);
