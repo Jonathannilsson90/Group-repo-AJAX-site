@@ -11,7 +11,7 @@
         <nav class="navbar">
             <ul>
                 <li><img src="../pictureLibrary/book-32.png" alt="Book logo"></li>
-                <li><a href="../products.html">Book library</a></li>
+                <li><a href="../index.html">Book library</a></li>
                 <li><a href="../admin/manage-products.html">Admin Tools</a></li>
             </ul>
         </nav>
@@ -25,7 +25,7 @@
 
     
         <div id="books-container">
-            <table>
+            <table id="table">
                 <tr>
                   <th>Title</th>
                   <th>Price</th>
@@ -33,34 +33,22 @@
                   <th>Date</th>
                   <th>Actions</th>
                 </tr>
-                <tr>
-                  <td><span>Charlotte's Web By E. B. White</span></td>
-                  <td><span>10</span></td>
-                  <td><span>2</span></td>
-                  <td><span>31.01.2019</span></td>
-                  <td>
-                    <div class="actions">
-                        <a href="#"><button class="back-btn">Change</button></a>
-                        <a href="#"><button class="back-btn">Delete</button></a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                    <td><span>Salt to the Sea by Ruta Sepetys</span></td>
-                    <td><span>100</span></td>
-                    <td><span>0</span></td>
-                    <td><span>10.02.2022</span></td>
-                    <td>
-                        <div class="actions">
-                            <a href="#"><button class="back-btn">Change</button></a>
-                            <a href="#"><button class="back-btn">Delete</button></a>
-                        </div>
 
-                    </td>
-                </tr>
               </table>
         </div>
-    </div>    
+        <div class="no-books">
+            
+        </div>
+    </div>
+    
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="js/functions.js"></script>  
     <script src="js/manage-products.js"></script>
 </body>
 </html>

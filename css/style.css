@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: white;
     color: black;
 }
@@ -16,6 +18,11 @@ h1, h2, p {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    border-bottom:#b54c18 solid 10px;
+    border-left:#b54c18 solid 10px;
+    border-right:#b54c18 solid 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .top-banner-content {
@@ -23,15 +30,16 @@ h1, h2, p {
     text-align: center;
 }
 
-.top-banner h1, .top-banner h2 {
-    margin: 0;
-    padding: 0;
-}
-
 .top-banner h1 {
     font-size: 3em;
     font-weight: bold;
     text-decoration: underline;
+    margin: 0;
+    padding: 0;
+}
+
+.top-banner h2 {
+    margin-top: 0px; 
 }
 
 .top-banner .admin-button {
@@ -39,21 +47,24 @@ h1, h2, p {
     margin-top: 20px;
 }
 
-.content-container{
-    margin: 0 auto;
-    width: 60%;
+#book-header{
+    text-align: center;
+    color: white;
+    background-color: #b54c18;
+    margin-top: -20px;
+    padding: 10px 0 20px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.container-book-shelf{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-content: space-between;
+.content-container{
+    margin: 0 auto;
+    width: 50%;
 }
 
 .container-book-shelf {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-content: space-between;
     align-items: center;

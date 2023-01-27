@@ -11,41 +11,43 @@
     <nav class="navbar">
         <ul>
             <li><img src="../pictureLibrary/book-32.png" alt="Book logo"></li>
-            <li><a href="../products.html">Book library</a></li>
+            <li><a href="../index.html">Book library</a></li>
             <li><a href="../admin/manage-products.html">Admin Tools</a></li>
         </ul>
     </nav>
 
     <div class ="header">
         <h1>Update book</h1>
+        <a href="manage-products.html"><button class="create-btn">Back to admin tool</button></a>
     </div>
 
     <div id="update-book-container">
         <div class="form-wrapper">
-            <form action="" class="update-book">
+            <form action="" id="update-book">
+
                 <div class="update-form-content">
 
                     <div class="form-title">
-                        <h2>Create form</h2>
+                        <h2>Update form</h2>
                     </div>
 
                     <div class="input-field">
-                        <label for="title">Title</label>
-                        <input id="title" type="text" class="input-field" required>   
+                        <label for="title">Title<span>*</span></label>
+                        <input id="title" type="text" class="input-field" name="title" required>   
                     </div>
 
                     <div class="input-field">
-                        <label for="description">Description</label>
-                        <textarea id="description" type="text" class="textarea" required></textarea>   
+                        <label for="description">Description<span>*</span></label>
+                        <textarea id="description" type="text" class="textarea" name="description" required></textarea>   
                     </div>   
 
                     <div class="input-field">
-                            <label for="price">Price</label>
-                            <input id="price" type="number" class="input-field" required>   
+                            <label for="price">Price<span>*</span></label>
+                            <input id="price" type="number" class="input-field" name="price" required>   
                     </div>
                     <div class="input-field">
-                            <label for="stock">Stock</label>
-                            <input id="stock" type="number" class="input-field" required> 
+                            <label for="stock">Stock<span>*</span></label>
+                            <input id="stock" type="number" class="input-field" name="stock" required> 
                     </div>                
 <!--                         <div class="input-field">
                         <label for="stock">Stock</label>
@@ -54,17 +56,17 @@
 
                     <div class="input-field">
                         <label for="image">Image</label>
-                        <input id="image" type="text" class="input-field">   
+                        <input id="image" type="text" class="input-field" name="image">   
                     </div>   
 
                     <div class="input-field">
-                        <label for="cathegory">Cathegory</label>
-                        <input id="cathegory" type="text" class="input-field">   
+                        <label for="category">Category</label>
+                        <input id="category" type="text" class="input-field" name="category">   
                     </div>   
                 </div>
             
                 <div class="submit-form">
-                    <button class="submit">Create</button>
+                    <button class="submit">Update</button>
                 </div>
 
             </form>
@@ -72,6 +74,15 @@
     </div>
 
 </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+    </script>
+
     <script src="js/update-product.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>

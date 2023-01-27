@@ -6,9 +6,6 @@ body {
 h1, h2, p {
     font-family: 'Spotify-Font', sans-serif;
 }
-.main-container{
-
-}
 
 #books-container{
     margin: auto;
@@ -59,8 +56,15 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer; 
+    width: 100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 button:hover, button:active {
     background-color: #c7531a;
+}
+
+.no-books{
+    text-align: center;
 }
