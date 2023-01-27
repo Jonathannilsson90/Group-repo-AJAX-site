@@ -5,7 +5,7 @@ const row = function(book, date) {
     return `  
     <tr>
                     <td><span><strong>${book.title}</strong></span></td>
-                    <td><span>${book.price}</span></td>
+                    <td><span>$${book.price}</span></td>
                     <td><span>${book.stock}</span></td>
                     <td><span>${book.category}</span></td>
                     <td><span>${date}</span></td>

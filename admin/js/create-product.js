@@ -14,7 +14,8 @@ form.addEventListener('submit', async function(event) {
 
     //Get values from form elements and create a new book object
     let cathegory = document.getElementById("category");
-    let cathegoryOption = cathegory.options[cathegory.selectedIndex].value;
+    let cathegoryOption = cathegory.options[cathegory.selectedIndex].value; 
+    
     console.log(cathegoryOption)
     let newBook = 
     {
