@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", async function(event) {
             let formData = new FormData(event.target); 
             let cathegory = document.getElementById("category");
             let cathegoryOption = cathegory.options[cathegory.selectedIndex].value;
-            console.log(cathegoryOption)
 
             let newBook = 
             {
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 image: formData.get('image'),
                 category: cathegoryOption,
             }
-            console.log(JSON.stringify(newBook));
 
             //Update existing book
             try
