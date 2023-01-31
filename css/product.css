@@ -1,4 +1,7 @@
 .spesifik-book {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 1vh;
   margin: 10% 5% 0% 5%;
   display: flex;
   justify-content: space-around;
@@ -7,5 +10,11 @@
   width: 30vh;
 }
 .spesifik-book .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50vh;
+}
+.spesifik-book .content button {
+  width: 10vh;
 }/*# sourceMappingURL=product.css.map */
