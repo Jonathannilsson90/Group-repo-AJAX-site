@@ -41,7 +41,7 @@ function displayBooks(books) {
         
         const priceBook = document.createElement("p");
         priceBook.setAttribute("id", "book-price");
-        priceBook.textContent = `Price: ${book.price}`;
+        priceBook.textContent = `Price: $${book.price}`;
         
         const stockBook = document.createElement("p");
         stockBook.setAttribute("id", "book-stock");
