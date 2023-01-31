@@ -4,9 +4,9 @@ Group project about making [an API](https://github.com/Jonathannilsson90/Group-r
 <br>
 We decided to host the website on railway.app to ease access for everyone involved in the project and to easier present out project to the class.
 As well as to learn more about webhosting.
-
+<p align="center">
 <img src="https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="650" height="300"> 
-
+</p>
 
 ---
 
