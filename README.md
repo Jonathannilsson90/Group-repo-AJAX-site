@@ -21,7 +21,7 @@ This is due to the fact that our site uses the <b>CRUD</b> (Create,Read,Update,D
 When the user press <i>"More information"</i> it will display the availablity of the book and also a description.
 
 <p align="center">
-<img src="https://assets.website-files.com/5ff66329429d880392f6cba2/61c323afb777801522775611_CRUD%20%20Preview.png" width="500" height="200">
+<img src="https://miro.medium.com/max/4800/1*pJRJgw1Vj-1MjhtQFZAZRA.webp" width="500" height="200">
 </p>
 
 ---
@@ -35,8 +35,7 @@ When the user press <i>"More information"</i> it will display the availablity of
 
 
 https://www.pexels.com/photo/assorted-books-on-shelf-1290141/
-
-https://www.wallarm.com/what/crud-meaning
+https://miro.medium.com/max/4800/1*pJRJgw1Vj-1MjhtQFZAZRA.webp
 
 ---
 
