@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 
     const table = document.getElementById('table');
     const divNoBooks = document.querySelector('.no-books');
+    
     divNoBooks.innerHTML = '';
 
     //Get all books
@@ -69,8 +70,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
                 {
                     let btn = e.target;
                     let bookId = btn.dataset.id;
-                    console.log(bookId);
-                    //Get a book with a cpecific bookId
+                    //Get a book with a cpecific bookId 
                     try
                     {
                         const response3 = await fetch(ROOT_URL + '/books' + `/${bookId}`, 
